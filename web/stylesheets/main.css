@@ -27,11 +27,6 @@ aside {
 .jumbotron h1 {
   font-size: 40px;
 }
-.loginbutton{
-	background-color: #112D32;
-	color: #effcebff;
-	border: none;
-}
 .Login{
 	margin: auto;
 	padding-top: 100px;
