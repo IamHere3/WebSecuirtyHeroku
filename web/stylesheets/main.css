@@ -7,6 +7,12 @@ aside {
   width: 100%; 
 }
 
+.Login{
+	margin: auto;
+	padding-top: 100px;
+    width: 30%;
+	text-align: center;
+}
 .jumbotron {
   background: #532F8C;
   color: white;
