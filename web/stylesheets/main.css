@@ -1,12 +1,15 @@
 html, body {
 	margin: 0;
-	background-color: #532F8C;
+	background-color: black;
 }
 
 aside { 
   width: 100%; 
 }
-	
+
+.body{
+  background: #532F8C;
+}
 .jumbotron {
   background: #532F8C;
   color: white;
