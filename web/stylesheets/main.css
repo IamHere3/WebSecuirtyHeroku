@@ -1,6 +1,6 @@
 html, body {
 	margin: 0;
-	background-color: black;
+	background-color: #532F8C;
 }
 
 aside { 
@@ -9,6 +9,7 @@ aside {
 
 .body{
   background: #532F8C;
+  height: 100%;
 }
 .jumbotron {
   background: #532F8C;
