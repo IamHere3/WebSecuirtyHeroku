@@ -4,7 +4,9 @@
   {% include 'header.html' %}
 </head>
 
-<body class="body">
-  {% include 'login.html' %}
+<body>
+  {% include 'nav.html' %}
+
+  {% block content %}{% endblock %}
 </body>
 </html>
