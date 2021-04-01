@@ -6,7 +6,7 @@ html, body {
 aside { 
   width: 100%; 
 }
-.button{
+.text{
 	color: black;
 }
 .Login{
@@ -16,7 +16,7 @@ aside {
 	text-align: center;
 }
 .jumbotron {
-  background: green;
+  background: #532F8C;
   color: white;
   padding-bottom: 80px;
 }
