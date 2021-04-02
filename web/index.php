@@ -16,14 +16,19 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 //database stuff
-
-$sql = 'SELECT * FROM users';
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$rowCount = $stmt->rowCount();
-$details = $stmt->fetch();
-
-echo ($details);
+try 
+{
+	$sql = 'SELECT * FROM users';
+	$stmt = $pdo->prepare($sql);
+	$stmt->execute();
+	$rowCount = $stmt->rowCount();
+	$details = $stmt->fetch();
+	echo $details;
+}
+catch (PDOException $e)
+{
+	echo 'Query Error: ' . $e->getMessage();
+}
 
 // Our web handlers
 
