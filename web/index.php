@@ -1,5 +1,5 @@
 <?php
-
+include ('database/databaseconnection.php')?
 require('../vendor/autoload.php');
 
 $app = new Silex\Application();
@@ -18,12 +18,8 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 //database stuff
 try 
 {
-	$sql = 'SELECT * FROM users';
-	$stmt = $pdo->prepare($sql);
-	$stmt->execute();
-	$rowCount = $stmt->rowCount();
-	$details = $stmt->fetch();
-	echo $details;
+	$result = $myPDO->query('SELECT * FROM users');
+	echo $result;
 }
 catch (PDOException $e)
 {
