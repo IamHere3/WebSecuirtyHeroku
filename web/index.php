@@ -15,19 +15,22 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
+//database stuff
+
+$sql = 'SELECT * FROM users';
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$rowCount = $stmt->rowCount();
+$details = $stmt->fetch();
+
+echo ($details);
+
 // Our web handlers
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
   return $app['twig']->render('index.twig');
 });
-
-//database connection
-$a = 1;
-if ($a == 1)
-{
-	echo "congrats";
-}
 
 $app->run();
 ?>
