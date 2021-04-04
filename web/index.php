@@ -29,6 +29,15 @@ catch (PDOException $e)
 echo 'Connection failed: ' . $e->getMessage();
 }
 
+try 
+{
+	$result = pg_query($db_connection, "SELECT * FROM users;");
+	echo $result;
+}
+catch (PDOException $e)
+{
+	echo 'Query Error: ' . $e->getMessage();
+}
 
 $app->run();
 ?>
